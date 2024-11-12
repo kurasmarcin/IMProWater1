@@ -1,0 +1,47 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IMProWater.HomePage"
+             BackgroundImageSource="tlo1.jpg">
+
+    <Grid HorizontalOptions="Center" VerticalOptions="CenterAndExpand" RowSpacing="20" ColumnSpacing="20">
+
+        <!-- Definicje wierszy i kolumn -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Ramka status zajmująca całą szerokość w pierwszym wierszu -->
+        <Frame Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="WhiteSmoke" Opacity="0.8" CornerRadius="25" Padding="20" HasShadow="False" BorderColor="Transparent"
+               WidthRequest="450" HeightRequest="200" HorizontalOptions="Center">
+            <Label Text="status" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" />
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnStatusTapped" />
+            </Frame.GestureRecognizers>
+        </Frame>
+
+        <!-- Ramka sekcje w drugim wierszu, pierwszej kolumnie -->
+        <Frame Grid.Row="1" Grid.Column="0" BackgroundColor="WhiteSmoke" Opacity="0.8" CornerRadius="25" Padding="20" HasShadow="False" BorderColor="Transparent"
+               WidthRequest="220" HeightRequest="200" HorizontalOptions="Center">
+            <Label Text="sekcje" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" />
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnSekcjeTapped" />
+            </Frame.GestureRecognizers>
+        </Frame>
+
+        <!-- Ramka ustawienia w drugim wierszu, drugiej kolumnie -->
+        <Frame Grid.Row="1" Grid.Column="1" BackgroundColor="WhiteSmoke" Opacity="0.8" CornerRadius="25" Padding="20" HasShadow="False" BorderColor="Transparent"
+               WidthRequest="220" HeightRequest="200" HorizontalOptions="Center">
+            <Label Text="ustawienia" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" TextColor="Black" />
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnUstawieniaTapped" />
+            </Frame.GestureRecognizers>
+        </Frame>
+
+    </Grid>
+</ContentPage>
